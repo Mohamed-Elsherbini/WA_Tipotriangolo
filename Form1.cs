@@ -20,13 +20,13 @@ namespace WA_Tipotriangolo
         private void btn_esegui_Click(object sender, EventArgs e)
         {
             //dati
-            float lato=Convert.ToInt32(txt_primo.Text), lato2= Convert.ToInt32(txt_secondo.Text), c= Convert.ToInt32(txt_terzo.Text);
+            float lato=Convert.ToInt32(txt_primo.Text), lato2= Convert.ToInt32(txt_secondo.Text), lato3= Convert.ToInt32(txt_terzo.Text);
             //scelta tipo triangolo
-            if (lato == lato2 && lato2 == c)
+            if (lato == lato2 && lato2 == lato3)
             {
                txt_risultato.Text="Equilatero";
             }
-            else if (lato == lato2 && lato2 != c || lato == c && c != lato2 || lato2 == c && lato != lato2)
+            else if (lato == lato2 && lato2 != lato3 || lato == lato3 && lato3 != lato2 || lato2 == lato3 && lato != lato2)
             {
                 txt_risultato.Text = "Isoscele";
             }
